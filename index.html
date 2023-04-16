@@ -1,40 +1,44 @@
 html
-<!DOCTYPE html>
+<!DOCTYPE html>  
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>9x9 乘法口诀表</title>
-    <style>
-        table {
-            border-collapse: collapse;
-            width: 50%;
-            margin: 0 auto;
-        }
-        td {
-            border: 1px solid #000;
-            padding: 10px;
-            text-align: center;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9x9 乘法口诀表</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            margin: 0 auto;
+        }
+        td {
+            border: 1px solid #000;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    <table>
-        <tbody>
-            <script>
-                for (let i = 1; i <= 9; i++) {
-                    document.write('<tr>');
-                    for (let j = 1; j <= 9; j++) {
-                        if (j <= i) {
-                            document.write('<td>' + i + ' x ' + j + ' = ' + (i * j) + '</td>');
-                        } else {
-                            document.write('<td></td>');
-                        }
-                    }
-                    document.write('</tr>');
-                }
-            </script>
-        </tbody>
-    </table>
+    <table>
+        <tbody>
+            <script>
+                for (let i = 1; i <= 9; i++) {
+                    document.write('<tr>');
+                    for (let j = 1; j <= 9; j++) {
+                        if (j <= i) {
+                            document.write('<td>' + i + ' x ' + j + ' = ' + (i * j) + '</td>');
+                        } else {
+                            if(i < j){    
+                                document.write('<td>' + j + ' x ' + i + ' = ' + (j * i) + '</td>');
+                            }else{  
+                                document.write('<td></td>');  
+                            }
+                        }
+                    }
+                    document.write('</tr>');
+                }
+            </script>
+        </tbody>
+    </table>
 </body>
 </html>
